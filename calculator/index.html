@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="calculator">
-            <input type="text" placeholder="0">
+            <input type="text" placeholder="0" id="output-screen">
             <button onclick="Clear()">C</button>
             <button onclick="del()">DEL</button>
             <button onclick="display('%')">%</button>
@@ -27,10 +28,11 @@
             <button onclick="display('+')">+</button>
             <button onclick="display('.')">.</button>
             <button onclick="display('0')">0</button>
+            <button onclick="Calculate()" class="equal">=</button>
 
         </div>
     </div>
-     <script>
+    <script>
         let outputScreen = document.getElementById("output-screen");
 
         function display(num){
